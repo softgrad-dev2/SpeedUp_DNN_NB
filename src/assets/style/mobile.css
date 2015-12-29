@@ -1,0 +1,10 @@
+.GridHolder{
+    width: 100%;
+    position: relative;
+    float: left !important;
+}
+#RecordDetailContainer.widen{
+    margin-top: 66px !important;
+    float: left;
+    width: 100%;
+}

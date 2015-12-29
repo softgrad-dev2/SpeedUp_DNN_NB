@@ -1,0 +1,58 @@
+<div id="recurrenceSettings" class="demo-section k-header">
+    <div id="headerBlock">
+        <div class="formCtrl">
+            <span class="description leftCol">{{ "Tabs.Repeats" | i18n }}</span>
+                    <span class="rightCol">
+                        <input id="repeatType" class="rightCol" value="{{ defaultRepeatType }}" />
+                    </span>
+        </div>
+    </div>
+    <div ng-attr-id="{{ el.value + 'Block' }}"  ng-repeat="el in repeatTypes" class="repetableSettingsBlock">
+        <div class="formCtrl">
+            <span class="description leftCol">{{ "Tabs.RepeatEvery" | i18n }}</span>
+            <div class="rightCol">
+                <input ng-attr-id="{{ el.value + 'RepeatEveryNumeric' }}" class="rightCol numericInput"/>
+                <div ng-switch on="el.value">
+                    <span ng-switch-when="daily">{{ "Labels.Days" | i18n }}</span>
+                    <span ng-switch-when="weekly">{{ "Labels.Weeks" | i18n }}</span>
+                    <span ng-switch-when="monthly">{{ "Labels.Months" | i18n }}</span>
+                    <span ng-switch-when="yearly">{{ "Labels.Years" | i18n }}</span>
+                </div>
+            </div>
+        </div>
+        <div ng-if="el.value == 'weekly'" class="formCtrl">
+            <span class="description leftCol">{{ "Tabs.RepeatOn" | i18n }}</span>
+                <div class="rightCol" >
+                    <span ng-repeat="i in [0,1,2,3,4,5,6]"><input  type="checkbox" name="weeklyRepeatOn[]" ng-checked="day == i"
+                           value="{{ i }}"/> {{ daysOfWeek[i] }} </span>
+                </div>
+        </div>
+        <div ng-if="el.value == 'monthly'" class="formCtrl">
+            <span class="description leftCol">{{ "Tabs.RepeatBy" | i18n }}</span>
+            <span class="rightCol">
+                <input type="radio" name="monthlyRepeatEnd" value="dayOfWeek" checked="checked"> {{ "Tabs.DayOfWeek" | i18n}}
+                <input type="radio" name="monthlyRepeatEnd" value="dayOfMonth"> {{ "Tabs.DayOfMonth" | i18n }}
+            </span>
+        </div>
+        <div class="formCtrl">
+            <span class="description leftCol">{{ "Tabs.StartsOn" | i18n }}</span>
+            <input ng-attr-id="{{el.value + 'StartOnDatePicker' }}" class="rightCol datepicker" />
+        </div>
+        <div class="formCtrl">
+            <span class="description leftCol">{{ "Tabs.Ends" | i18n }}</span>
+            <div class="rightCol">
+                <input type="radio" ng-attr-name="{{ el.value + 'RepeatEnd' }}" value="After" checked="checked">
+                {{ "Tabs.After" | i18n }}
+                <input ng-attr-id="{{ el.value + 'RepeatEndAfterNumeric'}}" class="numericInput"/>
+                {{ "Labels.Occurrences" | i18n }}
+            </div>
+        </div>
+        <div class="formCtrl">
+            <span class="description leftCol">&nbsp;</span>
+            <div class="rightCol">
+                <input type="radio" ng-attr-name="{{ el.value + 'RepeatEnd' }}" value="On"> {{ "Tabs.On" | i18n }}
+                <input ng-attr-id="{{ el.value + 'EndOnDatePicker' }}" class="datepicker" />
+            </div>
+        </div>
+    </div>
+</div>

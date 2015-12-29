@@ -1,0 +1,90 @@
+<div ng-switch on="property.DataType" class="elemComponent rightCol">
+    {{ property.PropertyLabel }}
+    <div ng-switch-when="DateTime">
+        <input class="advSearchInput"
+               ng-class="{invalid:!elementParams[property[propertyID]]['valid']}"
+               id="dt_{{ property[propertyID] }}"
+               kendo-date-time-picker
+               ng-model="elementParams[property[propertyID]]['value']"
+               k-options="dateTimePickerOptions" />
+        <div class="dtOptionsBar">
+            <label>
+                <input type="radio"
+                       value="before"
+                       name="cb_{{ property[propertyID] }}"
+                       ng-model="elementParams[property[propertyID]]['type']">
+                {{ tr.before }}
+            </label>
+            <label>
+                <input type="radio"
+                       value="after"
+                       name="cb_{{ property[propertyID] }}"
+                       ng-model="elementParams[property[propertyID]]['type']">
+                {{ tr.after }}
+            </label>
+        </div>
+    </div>
+    <div ng-switch-when="Date">
+        <input class="advSearchInput"
+               ng-class="{invalid:!elementParams[property[propertyID]]['valid']}"
+               id="dt_{{ property[propertyID] }}"
+               kendo-date-picker
+               ng-model="elementParams[property[propertyID]]['value']"
+               k-options="datePickerOptions" />
+        <div class="dtOptionsBar">
+            <label>
+                <input type="radio" value="before" name="cb_{{ property[propertyID] }}"
+                       ng-model="elementParams[property[propertyID]]['type']">
+                {{ tr.before }}
+            </label>
+            <label>
+                <input type="radio" value="after" name="cb_{{ property[propertyID] }}"
+                       ng-model="elementParams[property[propertyID]]['type']">
+                {{ tr.after }}
+            </label>
+        </div>
+    </div>
+    <div ng-switch-when="AutoText">
+        <input class="advSearchInput"
+               id="atxt_{{ property[propertyID] }}"
+               ng-model="elementParams[property[propertyID]]['value']"/>
+    </div>
+    <div ng-switch-when="Text">
+        <input class="advSearchInput"
+               id="txt_{{ property[propertyID] }}"
+               ng-model="elementParams[property[propertyID]]['value']"/>
+    </div>
+    <div ng-switch-when="TextBox">
+        <input class="advSearchInput"
+               id="tb_{{ property[propertyID] }}"
+               ng-model="elementParams[property[propertyID]]['value']"/>
+    </div>
+    <div ng-switch-when="DropDownList">
+        <input class="advSearchInput ddl"
+               id="ddl_{{ property[propertyID] }}"
+               ng-model="elementParams[property[propertyID]]['value']"/>
+    </div>
+    <div ng-switch-when="SearchableDropDownList">
+        <input class="advSearchInput ddl"
+               id="ddl_{{ property[propertyID] }}"
+               ng-model="elementParams[property[propertyID]]['value']"/>
+    </div>
+    <div ng-switch-when="ParentRelationship" class="autocompleteTabHolder">
+        <input class="advSearchInput"
+               id="rel_{{ property[propertyID] }}"
+               ng-model="elementParams[property[propertyID]]['value']"/>
+    </div>
+    <div ng-switch-when="ObjectRelationship" class="autocompleteTabHolder">
+        <input class="advSearchInput"
+               id="rel_{{ property[propertyID] }}"
+               ng-model="elementParams[property[propertyID]]['value']"/>
+    </div>
+    <div ng-switch-when="TrueFalse">
+        <input type="checkbox"
+               id="cb_{{ property[propertyID] }}"
+               ng-model="elementParams[property[propertyID]]['value']">
+    </div>
+    <!--<div ng-switch-default>-->
+    <!--{{ property.DataType }} : {{ property[propertyID] }}-->
+    <!--</div>-->
+</div>

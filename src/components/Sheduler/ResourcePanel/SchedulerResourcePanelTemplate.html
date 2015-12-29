@@ -1,0 +1,35 @@
+<div class="schedulerResourcePanelHolder demo-section k-content" style="display: none">
+        <ul id="schedulerResourcePanel" class="fieldlist">
+            <li>
+                <input type="checkbox" id="rpCbxCA" class="k-checkbox resPanelCbx"
+                       ng-click="checkAll()" ng-model="checkAllState">
+                <label class="k-checkbox-label" for="rpCbxCA" id="rpCbxCALbl">
+                    {{ "Labels.CheckAll" | i18n }}
+                </label>
+            </li>
+            <li ng-repeat="resource in resourcePanelData" rp-post-repeat>
+                <input
+                type="checkbox"
+                name="resourcePanelCbx[]"
+                value="{{resource.text}}"
+                ng-model="resource.selected"
+                ng-attr-id="{{ 'rpCbx-' + $index }}"
+                ng-click="filterContent()"
+                class="k-checkbox resPanelCbx"/>
+
+                <label class="k-checkbox-label" ng-attr-for="{{ 'rpCbx-' + $index }}"
+                       ng-attr-id="{{ 'rpCbxLbl-' + $index }}"
+                        data-index="{{ $index }}">
+                    {{ resource.text }}
+                </label>
+            </li>
+        </ul>
+
+
+
+        <!--<div ng-repeat="resource in resourcePanelData">-->
+            <!--<div class="resourceCheckbox"></div>-->
+            <!--{{ resource.text }}-->
+            <!--<div class="resourceDropdownSelector"></div>-->
+        <!--</div>-->
+</div>

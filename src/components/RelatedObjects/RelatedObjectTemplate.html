@@ -1,0 +1,11 @@
+<div>
+    <input ng-attr-id="{{'hdn' + fieldName }}" type="hidden"
+           value="{{ fieldName }}" class="_objectRelationShip"/>
+    <input ng-attr-id="{{ 'txt' + fieldName }}" type="text" value=""
+           class="_objectRelationShip"/>
+    <input type="image" class="_objRelButtonSearch"
+           ng-src='{{ imgSrc }}'/>
+    <div class="relatedGridHolder">
+        <speedup-grid parameters="gridParameters"></speedup-grid>
+    </div>
+</div>

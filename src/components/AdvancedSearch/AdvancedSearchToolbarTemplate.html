@@ -1,0 +1,22 @@
+<div id="advancedSearchToolbarHolder"  class="toggledOn" style="display:none">
+    <div id="advancedSearchTabHolder">
+        <!--<div class="_filterContainer ObjectGridfilterContainer">-->
+        <div>
+            <ul class="objectAdvancedSearchList">
+                <!--<ul class="objectFilterList">-->
+                <li on-repeat-done-as="property" ng-repeat="property in propertyList">
+                    <div class="advancedSearchElementContainer">
+                        <!--<div class="elemComponent leftCol">-->
+                        <!--<input type="checkbox" ng-model="clicked[$index]">-->
+                        <!--</div>-->
+                        <advancedsearchelement></advancedsearchelement>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="advancedSearchBottomButtonGroup">
+        <a class="k-button k-primary" href="javascript:" ng-click="search()">{{ tr.search }}</a>
+        <a class="k-button k-primary" href="javascript:" ng-click="clear()">{{ tr.clear }}</a>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="gridToolbarWrapper">
+    <div ng-if="showCreateNewButton" class="createBtnWrapper">
+        <input type="button" class="_btnAddNewRecord gridToolbarButton" value="{{ 'Buttons.Create' | i18n }}" style="width: 150px"/>
+    </div>
+    <div class="filterGridTab">
+        <div ng-if="filter" class="filterDropdownContainer">
+            <filterDropDown filter-options="filter"></filterDropDown>
+        </div>
+        <div ng-if="genericSearch" class="_searchContainer">
+            <input type="text" class="_txtObjectSearch txtfiltertextbox">
+            <input id="objectSearch" class="_objectSearchButton" type="button" value='{{ "Buttons.Search" | i18n }}'>
+        </div>
+    </div>
+</div>

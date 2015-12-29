@@ -1,0 +1,19 @@
+<div>
+    <script id="odSummaryBlock" type="text/x-kendo-template">
+        # $.each(data.Summary, function (index, item) { #
+        <tr>
+            <td colspan="2">
+                <div class="display-label-summary prop-lbl"> ${item.PropertyLabel} </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div key="${item.PropertyName}" dtype="${item.DataType}" #if(item.DataType!='RichTextBox'){#title="${item.PropertyValue}" #}# style="width: 94% !important;" class="prop-lbl display-value-summary _keycontainer" >
+                <input type="hidden" class="_hdnOldPropertyValue FixedWidthAllInputs" value="${item.PropertyValue}"/>
+                <span> #=item.PropertyValue# </span>
+                </div>
+            </td>
+        </tr>
+        #});#
+    </script>
+</div>

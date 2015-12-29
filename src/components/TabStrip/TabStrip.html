@@ -1,0 +1,27 @@
+<div class="_tabStrip">
+    <ul>
+        <li class="_tabDetails k-state-active" >{{"Tabs.Details" | i18n}}</li>
+        <li class="_tabAttachments" ng-show="tabStrip.settings.showAttachments"> {{"Tabs.DocumentsAndAttachments" | i18n}}</li>
+        <li ng-repeat="tab in tabStrip.tabs" class="_subObjectTab" ng-attr-odn="{{ tab.ObjectDefinitionName }}">{{ tab.ObjectLabel || tab.ObjectDefinitionName }}</li>
+    </ul>
+    <div>
+        <div class="_detailsContent" ng-attr-recordId="{{ tabStrip.settings.recordId }}" ng-attr-odn="{{ tabStrip.settings.odn }}">
+            <div ng-transclude></div>
+        </div>
+    </div>
+    <div class="_tabAttachments" >
+        <div ng-show="tabStrip.attachments.attachments" class="_attachmentContent" ng-attr-id="{{ tabStrip.settings.recordId && tabStrip.settings.attachmentId }}">
+            <object-detail-attachment  source="tabStrip.attachments" settings="settings"></object-detail-attachment>
+        </div>
+    </div>
+    <div ng-repeat="tab in tabStrip.tabs">
+        <!--<div ng-if="tabStrip.settings.displaySubObjectRecordAddButton">-->
+            <!--<input type="button" ng-attr-data-objectname={{tab.ObjectDefinitionName}} ng-attr-data-propertyname={{tab.PropertyName}}-->
+                   <!--class="_btnAddNewSubObjectRecord" value='{{"Buttons.Create" | i18n}}'>-->
+        <!--</div>-->
+        <div class="_subObjectContent" data-role="cgrid" ng-attr-data-propertyname={{tab.PropertyName}}
+             ng-attr-data-objectname={{tab.ObjectDefinitionName}}>
+            <div class="tabStripRelatedPropertyDetailContainer"></div>
+        </div>
+    </div>
+</div>

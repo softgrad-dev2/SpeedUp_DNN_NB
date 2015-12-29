@@ -1,0 +1,40 @@
+<div>
+    <input ng-if="source.addAttachment" class="{{ source.fileUploadId }}" type="file" name="{{ source.fileUploadId }}" id="{{ source.fileUploadId }}" />
+    <table class="_tblDocumentsAndAttachments">
+        <tr>
+            <th ></th>
+            <th align="left">{{ "ColumnNames.FileName" | i18n }}</th>
+            <th align="left">{{ "ColumnNames.CreatedDate" | i18n }}</th>
+            <th></th>
+        </tr>
+        <tbody>
+            <tr ng-if="!source ||
+            !source.attachments ||
+            !!source.attachments.length">
+                <td colspan="3" style="text-align:center">
+                    {{ "Messages.NoContentToDisplay" | i18n }}
+                </td>
+            </tr>
+            <tr ng-repeat="attachment in source.attachments">
+                <td>
+                    <img height="32px" width="32px" ng-src="{{ attachment.iconPath }}">
+                </td>
+                <td style="padding-right: 20px;" >
+                    <div class=" padding-top: 5px;">
+                        <a href="{{ attachment.ImageUrl }}" target="_blank" >
+                            {{ attachment.ImageName }}
+                        </a>
+                    </div>
+                </td>
+                <td>{{ attachment.CreatedDate }}</td>
+                <td ng-if="source.addAttachment">
+                    <a href="javascript:void(0)" ng-click="removeFile(attachment.FileId,attachment.ObjectDefinitionName, attachment.recordId)">
+                        {{ "Buttons.Remove" | i18n }}
+                    </a>
+                <td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="clear:both;"></div>
+    <div class='_documentsUploader'></div>
+</div>

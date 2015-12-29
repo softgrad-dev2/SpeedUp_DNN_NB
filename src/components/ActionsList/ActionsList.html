@@ -1,0 +1,39 @@
+<div class="_actionscontainer">
+    <ul class="actionsNav">
+        <li>
+            <a class="fly" href="javascript:void(0)">{{ "ActionMenu.Action" | i18n }}</a>
+            <ul class="dd">
+                <li>
+                    <a href="javascript:void(0)" class="fly2">{{ "Buttons.Create" | i18n }}</a>
+                    <ul>
+                        <li ng-repeat="object in actions.subObjects">
+                            <div class="fly3 subobjectAction"  data-objectname="{{ object.ObjectDefinitionName }}"
+                               data-propname="{{ object.PropertyName }}">
+                                {{ object.ObjectLabel || object.ObjectDefinitionName }}
+                            </div>
+                            <!--<a class="fly3 subobjectAction"  data-objectname="{{ object.ObjectDefinitionName }}"-->
+                               <!--data-propname="{{ object.PropertyName }}" href="javascript:void(0)">-->
+                                <!--{{ object.ObjectLabel || object.ObjectDefinitionName }}-->
+                            <!--</a>-->
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="fly2 copyObjectAction noArrow" href="javascript:void(0)">
+                        {{ "Buttons.CopyObject" | i18n }}
+                    </a>
+                </li>
+                <li>
+                    <a class="fly2 deleteObjectAction noArrow" href="javascript:void(0)">
+                        {{ "Buttons.DeleteObject" | i18n }}
+                    </a>
+                </li>
+                <li ng-if="actions.objectRepeatable">
+                    <a class="fly2 repeatObjectAction noArrow" href="javascript:void(0)">
+                        {{ "Buttons.RepeatObject" | i18n }}
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

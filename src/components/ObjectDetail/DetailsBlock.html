@@ -1,0 +1,267 @@
+<div id="oddb" class="detailPageMainBlock">
+<script id="odDetailsBlock" type="text/kendo-ui-template">
+<form class="detailForm">
+<table class="tbldetail _tbldetail DetailTemplate">
+#if(data.DisplayEditButton==true){ #
+<tr>
+    <td><input type="button" class="_editObjectButton" value="${$.objectLanguage.Buttons.Edit}"></td>
+</tr>
+#} if(data.DisplayAddNewButton==true && 1==0){ #
+<tr>
+    <td><input type="button" class="_btnAddNewRecord" value="${$.objectLanguage.Buttons.Create}"></td>
+</tr>
+#} if(data.DisplaySaveRecordButton){ #
+<tr>
+    <td>
+        <input type="button" class="_btnCreateRecord" value="${$.objectLanguage.Buttons.Save}">
+        <input type="button" class="_btnCancelCreateRecord" value="${$.objectLanguage.Buttons.Cancel}">
+    </td>
+</tr>
+#} #
+<tr>
+    <td class="display-td">
+        <div class="DetailContainer">
+            # if(data.ImageUrl) {#
+            <div class="ContainerDiv">
+                <div class="_AttachmentImages attachmentImages" ><img src="${data.ImageUrl}"/></div>
+            </div>
+            #} else {#
+            <div class="ContainerDiv hidden">
+                <div class="_AttachmentImages attachmentImages" ><img src=""/></div>
+            </div>
+            #}#
+            <div # if(!data.ImageUrl) {# class="ContainerDiv widen" #} else {# class="ContainerDiv" #}#>
+                # $.each(data.Maps, function (index, item) { #
+                <div key="${item.PropertyName}" dtype="${item.DataType}" class="_keycontainer" >
+                    <input type="hidden" class="_hdnOldPropertyValue FixedWidthAllInputs" value="${item.PropertyValue}"/>
+                    <input type="hidden" class="_hdnOldPropertyValue FixedWidthAllInputs" value="${item.PropertyValue}"/>
+                    <div class="mapdiv" id="${item.Mapdiv}"></div>
+                    <div class="_editBlock _saveOnBlur displaynone">
+                        <input type="hidden" class="_maptypefield FixedWidthAllInputs" id="${item.MapTypeField}" value="${item.MapType}"/>
+                        <input type="hidden" class="_mapzoomfield FixedWidthAllInputs" id="${item.MapZoomField}" value="${item.MapZoom}"/>
+
+                        <div><div class="display-label prop-lbl textalignement"> Latitud:</div> <input type="text" class="_maplatfield FixedWidthAllInputs" id="${item.LatField}" value="${item.Latitude}"/> </br>
+                            <div class="display-label prop-lbl textalignement"> Longitud:</div> <input type="text" class="_maplongfield FixedWidthAllInputs" id="${item.LongField}" value="${item.Longitude}"/>
+                            <a id="GetAddress" class="getAddressLink" href="javascript:void(0)">${$.objectLanguage.ColumnNames.GetAddress}</a></div>
+                        <div>  <div class="display-label prop-lbl textalignement"> Adress:</div> <input type="text" class="_mapaddressfield FixedWidthAllInputs" id="${item.AddressField}" value="${item.Address}"/>
+                            <div style="display:inline-block"><a  style="margin-left:4%;" class="getLatLongLink"  href="javascript:void(0)">${$.objectLanguage.ColumnNames.Getcoordinates} </a></div>&nbsp;
+                            <div style="display:inline-block"><a  style="margin-left:4%;" class="getCurrentLocationLink"  href="javascript:void(0)">${$.objectLanguage.ColumnNames.Retrievecurrentposition} </a></div></div>
+                        <div class="InlineEditButtonBlock">
+
+                        </div>
+                    </div>
+                    <div class="_simpleBlock simpleBlock displayblock" >
+                        ${item.Address}
+                    </div>
+                </div>
+                #});#
+            </div>
+        </div>
+    </td>
+</tr>
+# $.each(data, function (index, item) { #
+# if((index % 2) == 0){#
+<tr>
+    <td class="display-td" #if((index % 2) == 0 && index == (data.length -1)){# colspan="2" #}#>
+    #}#
+    <div class="ContainerDiv DetailMode">
+        <div class="display-label prop-lbl"> ${item.PropertyLabel} </div>
+        <div key="${item.PropertyName}" dtype="${item.DataType}" #if(item.DataType!='RichTextBox' && item.DataType!='TrueFalse'){#title="${item.PropertyValue}" #}# class="display-value _keycontainer" >
+        <input type="hidden" class="_hdnOldPropertyValue FixedWidthAllInputs" value= '#= item.PropertyValue#' >
+        # if(item.DataType=='Image'){ #
+        <img style="width:60px;" src="${item.PropertyValue}">
+        # } else if(item.DataType=='URL'){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <input type="text" class="FixedWidthAllInputs" id="txt" ${item.propertyname} value="${item.PropertyValue}" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock  displayblock" >
+            <a href="${item.PropertyValue}"  target="_blank" >${item.PropertyValue}</a>
+        </div>
+        # } else if(item.DataType=='DateTime'){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <!--debug-->
+            <!--<input item-role="datepicker" value="${data.helpers.dateTimeFormat(item.PropertyValue)}" id="txtdateTime${item.PropertyName}" class="_dateTimePicker datetimeWidth" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />-->
+            <input item-role="datepicker" value="${data.helpers.dateTimeFormat(item.PropertyValue)}" id="txtdateTime${item.PropertyName}" v-type='DateTime' class="_dateTimePicker datetimeWidth"  />
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            #= data.helpers.dateTimeFormat(item.PropertyValue)#
+        </div>
+        # } else if(item.DataType=='Date'){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <!--<input item-role="datepicker" value="${data.helpers.dateFormat(item.PropertyValue)}" id="txtdate${item.PropertyName}" class="_datePicker datepickerWidth " #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />-->
+            <input item-role="datepicker" value="${data.helpers.dateFormat(item.PropertyValue)}" id="txtdate${item.PropertyName}" v-type='Date' class="_datePicker datepickerWidth " #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            #= data.helpers.dateFormat(item.PropertyValue)#
+        </div>
+        # }  else if(item.DataType=='Time'){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <input item-role="datepicker" value="${item.PropertyValue}" id="txttime${item.PropertyName}" class="_timePicker  timepickerWidth" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock  displayblock" >
+            #= item.PropertyValue#
+        </div>
+        # } else if(item.DataType=='Email'){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <input type="text" id="txt${item.PropertyName}" class=" FixedWidthAllInputs" value="${item.PropertyValue}" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            <a href="mailto:${item.PropertyValue}" target="_blank" >${item.PropertyValue}</a>
+        </div>
+
+        # }  else if((item.DataType=='MultiSelectList' || item.DataType=='SearchableDropDownList' || item.DataType=='DropDownList')){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <select class=" multiselectWidth" id="${item.PropertyName}" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" #><option></option><option value="dummy" selected="selected"></option></select>
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            #= item.PropertyValue#
+        </div>
+        # } else if(item.DataType=='RichTextBox'){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <textarea id="richtxt${item.PropertyName}" class="_richtextbox" rows="10" cols="30" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" #>#=item.PropertyValue#  </textarea>
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            #= item.PropertyValue#
+        </div>
+        # }  else if(item.DataType=='TextBox'){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <textarea id="txt${item.PropertyName}" class="_multiline " rows="10" cols="30" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" #>#=item.PropertyValue#  </textarea>
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            #= item.PropertyValue#
+        </div>
+        # }  else if((item.DataType=='NumericText'|| item.DataType=='Numeric')){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <input id="txtNum${item.PropertyName}" class="_numericText  numerictextboxWidth" value=${item.PropertyValue} #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            #= item.PropertyValue#
+        </div>
+        #}  else if(item.DataType=='Formula' || item.DataType=='Summary' ){ #
+        <span > #=item.PropertyValue# </span>
+        #}  else if(item.DataType=='TrueFalse' ){ #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <input id="chk${item.PropertyName}" type="checkbox" #=item.PropertyValue ==1 ? "checked=checked" : "" #  ></input>
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            <input type="checkbox" #=item.PropertyValue ==1 ? "checked=checked" : "" # disabled="disabled" ></input>
+        </div>
+        # } else if(item.DataType=='ObjectRelationship' ){ #
+            <div class="relField _editBlock _saveOnBlur displaynone">
+                <div class="inputsBlock">
+                    <input id="hdn${item.PropertyName}" type="hidden" value="${item.ObjectId}" class="_objectRelationShip FixedWidthAllInputs" />
+                    <input id="txt${item.PropertyName}" type="text" value="${item.ObjectName}" class="_objectRelationShip FixedWidthAllInputs" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                </div>
+                <div class="magnifier">
+                    <img class="_objRelButton" src=#=data.helpers.getPluginImageUrl("JS/img/search.png")# />
+                </div>
+                <div class="InlineEditButtonBlock">
+
+                </div>
+            </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            <a href="javascript:void(0)" class="_viewdetailObjectRelationship" > #= item.ObjectName# </a>
+        </div>
+        # } else if(item.DataType=='ParentRelationship'){ #
+            <div class="relField _editBlock _saveOnBlur displaynone">
+                <div class="inputsBlock">
+                    <input id="hdn${item.PropertyName}" type="hidden" value="${item.ObjectId}" class="_objectRelationShip FixedWidthAllInputs" />
+                    <input id="txt${item.PropertyName}" type="text" value="${item.ObjectName}" class="_objectRelationShip FixedWidthAllInputs" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                </div>
+                <div class="magnifier">
+                    <img class="_objRelButton" src=#=data.helpers.getPluginImageUrl("JS/img/search.png")# />
+                </div>
+                <div class="InlineEditButtonBlock">
+
+                </div>
+            </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            <a href="javascript:void(0)" class="_viewdetailObjectRelationship" > #= item.ObjectName# </a>
+        </div>
+        #} else if(item.DataType=='MultiObjectRelationshipField'){ #
+        <div class="relField _editBlock _saveOnBlur displaynone">
+            <div class="inputsBlock">
+                <input id="hdn${item.PropertyName}" type="hidden" value="${item.ObjectId}" class="_objectRelationShip FixedWidthAllInputs" />
+                <input id="txt${item.PropertyName}" type="text" value="${item.ObjectName}" class="_objectRelationShip FixedWidthAllInputs" />
+                <select class=" DropdownlistWidth" id="ddl${item.PropertyName}"></select>
+            </div>
+            <div class="magnifier">
+                <img class="_objRelButton" src=#=data.helpers.getPluginImageUrl("JS/img/search.png")#  />
+            </div>
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            <a href="javascript:void(0)" class="_viewdetailObjectRelationship" > #= item.ObjectName# </a>
+        </div>
+        #}  else { #
+        <div class="_editBlock _saveOnBlur displaynone">
+            <input class=" FixedWidthAllInputs" type="text" id="txt${item.PropertyName}" value="${item.PropertyValue}" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+            <div class="InlineEditButtonBlock">
+
+            </div>
+        </div>
+        <div class="_simpleBlock simpleBlock displayblock" >
+            #= item.PropertyValue#
+        </div>
+
+        # } #
+
+    </div>
+    <div style="clear:both"></div>
+    </div>
+    #if((index % 2) == 1){#
+    </td>
+</tr>
+#}#
+#});#
+# $.each(data.Summary, function (index, item) { #
+<tr>
+    <td colspan="2">
+        <div class="display-label-summary prop-lbl"> ${item.PropertyLabel} </div>
+    </td>
+</tr>
+<tr>
+    <td colspan="2">
+        <div key="${item.PropertyName}" dtype="${item.DataType}" #if(item.DataType!='RichTextBox'){#title="${item.PropertyValue}" #}# style="width: 94% !important;" class="prop-lbl display-value-summary _keycontainer" >
+        <input type="hidden" class="_hdnOldPropertyValue FixedWidthAllInputs" value="${item.PropertyValue}"/>
+        <span> #=item.PropertyValue# </span>
+        </div>
+    </td>
+</tr>
+#});#
+</table>
+</form>
+</script>
+</div>

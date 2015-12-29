@@ -1,7 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f179aca8-5947-4812-a042-c2a4b245d2df" name="Default" comment="" />
+    <list default="true" id="f179aca8-5947-4812-a042-c2a4b245d2df" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/nov_2015/1keyboard_cropped.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/nov_2015/2wo_image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/nov_2015/3noMapScrolling.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/nov_2015/5batch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/Notifications/ASearch_cropped.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/Notifications/Filter_cropped5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/NoImage.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/Notifications/Search_cropped.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/arrow.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/arrow1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/dec_2015/assignee_panel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/dec_2015/assignee_panel_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/dec_2015/assignee_panel_2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/dec_2015/assignee_panel_3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/JQuery/AnythingSlider/images/default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/edit.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/editor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/editor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/editor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/fullpageloader.GIF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/fullpageloader1.GIF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/hide.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/hide.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/imagebrowser.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/imagebrowser.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/imagebrowser.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/images.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/indeterminate.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/indeterminate.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/indeterminate.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/layer-switcher-maximize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/OpenLayers/img/layer-switcher-maximize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/layer-switcher-minimize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/OpenLayers/img/layer-switcher-minimize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/loading-image.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/loading-image.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/loading-image.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/loading1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/loading_2x.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/loading_2x.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/loading_2x.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/markers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/markers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/markers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/markers_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/markers_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/markers_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/resource.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/show.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/JS/img/show.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/slider-h.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/slider-h.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/slider-h.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/slider-v.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/slider-v.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/slider-v.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/sprite_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/sprite_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/sprite_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/sprite_kpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/sprite_kpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/sprite_kpi.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Flat/sprite_kpi_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Metro/sprite_kpi_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/Silver/sprite_kpi_2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ActionsList/ActionsList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ActionsList/ActionsListDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ActionsList/ActionsListService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AdvancedSearch/AdvancedSearchDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AdvancedSearch/AdvancedSearchFilterExpressionService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AdvancedSearch/AdvancedSearchService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Schema/AdvancedSearchTemplateService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Tests/SchemaService/AdvancedSearchTemplateService.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AdvancedSearch/AdvancedSearchToolbarTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AnimationService/AnimationService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/AttachmentsService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/AutocompleteService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/AutocompleteService_old.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/BatchEdit/BatchEditBtnTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/BatchEdit/BatchEditDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/BatchEdit/BatchEditService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/BatchEdit/BatchEditTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/BatchEdit/BatchForm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AdvancedSearch/ButtonTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ClientSideViewer/CSVPageLogicController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/CommonService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Tests/Mocks/Config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/Config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/ConfigHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ClientSideViewer/ConfigScheduler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/ConfigService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ConversionBar/ConversionBar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ConversionBar/ConversionBarDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ConversionBar/ConversionBarService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ConversionBar/ConversionCacheService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/CreateNewObjectDetail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectEdit/CreateNewObjectEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Helpers/DateTimeHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/DateTimeService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/DetailPageBlock.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/DetailPageFieldService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/DetailPageFieldValuesService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Map/DetailPageMapService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/DetailsBlock.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/AdvancedSearch/ElementTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/EventManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/Events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/ExceptionHandler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Exception/Exceptions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/ExistingObjectDetail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/ExistingObjectDetailService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Tests/ObjectDetail/FakeBlocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/FieldPropertiesService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/FieldService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/FilesystemService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Filter/FilterService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Filter/FilterTabDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Filter/FilterTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridColumnsService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridDataService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridDrective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridFilterExpressionService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridRefreshService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridSchemaService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/Toolbar/GridToolbar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/Toolbar/GridToolbarDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/GridWidgetService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/ImageMapsBlock.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/InlineFieldValueSaverService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/InlineFieldValueValidatorService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/ListDataService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Localization/LocalizationModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Modal/ModalService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Notification/NotificationService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/NotificationService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/OpenLayers/OM.EditRecord.Map.OpenLayer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/ObjectDataService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/ObjectDetail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/ObjectDetailAttachmentDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/ObjectDetailDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetailDisplayer/ObjectDetailDisplayerService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/ObjectDetailService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectEdit/ObjectEdit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectEdit/ObjectEditDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectEdit/ObjectEditService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Localization/languages/ObjectLanguage-en-US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Localization/languages/ObjectLanguage-sv-SE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectRecurrence/ObjectRecurrence.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectRecurrence/ObjectRecurrenceDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/ObjectService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Schema/ObjectTemplateService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/OpenLayers/OpenLayers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ClientSideViewer/PageLogicController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Schema/PageTemplateObjectCacheService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Schema/PageTemplateObjectService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/PopupService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PrintBar/PrintBar.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PrintBar/PrintBarDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PrintBar/PrintBarService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PrintBar/PrintTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PrintBar/PrintTemplateCacheService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/PropertySaverFactory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/RelatedObjects/RelatedObjectTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/RelatedObjects/RelatedObjectsDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/RelatedObjects/RelatedObjectsService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ActionsList/RepeatActionService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/ResourcePanel/SchedulerAPIFilterService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/SchedulerDataSourceService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/SchedulerDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/SchedulerDirectiveTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/SchedulerHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/SchedulerParametersService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/SchedulerPopupService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/SchedulerRefreshService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/ResourcePanel/SchedulerResourcePanelDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/ResourcePanel/SchedulerResourcePanelTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/SchedulerResourcesService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Service/SchemaService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Tests/Service/SchemaService.spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/Summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/TabStrip.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/TabStripDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/SubObject/TabStripHeaderSubObject.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/SubObject/TabStripHeaderSubObjectDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/SubObject/TabStripHeaderSubObjectService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/TabStripService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/Angular/angular-cookies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/Angular/angular-mocks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/Angular/angular-resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/Angular/angular.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/JQuery/AnythingSlider/anythingslider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Common/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ClientSideViewer/configCommon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/ClientSideViewer/configGrid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/fieldInlineEditService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/JQuery/jquery-1.10.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/JQuery/jquery-1.10.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/JQuery/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/JQuery/AnythingSlider/jquery.anythingslider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/jquery.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/jszip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/kendo.all.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/kendo.all.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/kendo.angular.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/kendo.angular.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/kendo.common.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/kendo.culture.sv-SE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/kendo.flat.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/kendo.messages.sv-SE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/kendo.metro.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/styles/kendo.silver.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/kendo.timezones.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vendor/KendoALL/kendo_beautified.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/ViewObjectDataGridCalendar/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/ViewObjectDataGrid/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/ViewObjectDataGridCalendar/js/main.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/ViewObjectDataGrid/js/main.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/style/mobile.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ConversionBar/module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Grid/module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/ObjectDetail/module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PrintBar/module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Sheduler/module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Notification/notificationPopupService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/style/notifications.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/TabStrip/objectDetailAttachmentTemplate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/style/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="SpeedUp_DNN_NB.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,19 +272,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="14" selection-start="1962" selection-end="1962" vertical-scroll-proportion="1.0089686" vertical-offset="720" max-vertical-offset="2640">
+            <state line="7" column="22" selection-start="248" selection-end="248" vertical-scroll-proportion="-2.4705882" vertical-offset="0" max-vertical-offset="2640">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="configCommon.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/ClientSideViewer/configCommon.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="24" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+            <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
               <folding />
             </state>
           </provider>
@@ -48,10 +306,20 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/app/ClientSideViewer/configCommon.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -62,7 +330,7 @@
     <option name="width" value="1364" />
     <option name="height" value="726" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -112,12 +380,23 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\projects\SpeedUp_DNN_NB" />
+      <recent name="C:\projects\SpeedUp_DNN_NB\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\SpeedUp_DNN_NB" />
+      <recent name="C:\projects\SpeedUp_DNN_NB\build" />
     </key>
   </component>
   <component name="RunManager">
@@ -137,6 +416,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f179aca8-5947-4812-a042-c2a4b245d2df" name="Default" comment="" />
@@ -154,10 +450,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23655914" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2718894" sideWeight="0.67017543" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982457" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -181,16 +477,30 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+        <state line="7" column="22" selection-start="248" selection-end="248" vertical-scroll-proportion="-2.4705882" vertical-offset="0" max-vertical-offset="2640">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/node_modules/q/q.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="14" selection-start="1962" selection-end="1962" vertical-scroll-proportion="1.0089686" vertical-offset="720" max-vertical-offset="2640">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="61620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ClientSideViewer/configCommon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
           <folding />
         </state>
       </provider>

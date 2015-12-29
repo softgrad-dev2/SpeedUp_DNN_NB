@@ -1,0 +1,676 @@
+#filterToolbarHolder {
+    right: 11px;
+    margin-top: 42px;
+    position: absolute;
+}
+
+#filterToolbarHolder.toggledOn {
+    width: 22%;
+}
+
+#filterTabButton {
+    cursor: pointer;
+    border-bottom: 3px solid #2e9dc8 !important;
+    border-radius: 5px;
+    background-color: #50c1e9;
+    height: 20px;
+    padding: 6px 0px 0px 5px;
+    margin-left: 5px;
+    font-family: OpenSans-Bold;
+    position: absolute;
+    right: 0px;
+    top: -37px;
+    color: #FFFFFF;
+}
+
+#filterTabButton.toggledOn {
+    background-color: #50c1e9;
+    color: #fff;
+    height: 20px;
+    border-bottom: 2px solid #2e9dc8 !important;
+    font-family: OpenSans-Bold;
+    line-height: normal;
+    padding: 8px;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: block;
+    width: 21%;
+}
+
+#filterTabButton.toggledOff {
+    display: inline-block;
+    width: 65px;
+}
+
+#filterTabButtonImage.toggledOn {
+    top: 6px;
+    display: inline-block;
+    float: right;
+    position: relative;
+    background-image: url("../img/hide.png");
+    background-repeat: no-repeat;
+    background-size: 85%;
+    width: 12px;
+    height: 12px;
+}
+
+#filterTabButtonImage.toggledOff {
+    right: 5px;
+    top: 10px;
+    display: inline-block;
+    position: absolute;
+    background-image: url("../img/show.png");
+    background-repeat: no-repeat;
+    background-size: 85%;
+    width: 12px;
+    height: 12px;
+    line-height: normal;
+    margin-left: 10px;
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+.TopContainer {
+    width: 77%;
+    margin: 30px 0;
+    float: left;
+    border-radius: 5px;
+    /*position: relative;*/
+}
+
+#TopContainer {
+    overflow: hidden;
+    /*position: relative;*/
+}
+
+#ASTopContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.FirstRowContainer {
+    width: 100%;
+    margin: 40px 0;
+    float: left;
+    border-radius: 5px;
+    position: relative;
+}
+
+.FilterHideLabel {
+    position: absolute;
+    float: right;
+    top: 9px;
+    right: 23px;
+}
+
+.filterDropdownContainer {
+    position: relative;
+    float: right;
+    display: block;
+    margin: 3px;
+}
+
+.SchedulerPane {
+    position: relative;
+}
+
+.SchedulerPane .filterDropdownContainer {
+    position: relative;
+    border: solid;
+    border-width: 1px 1px 1px 0px;
+    border-color: rgba(128, 128, 128, 0.32);
+    margin: 1px 1px 1px 0px;
+}
+
+.SchedulerPane #advancedSearchToolbarHolder.toggledOn {
+    width: 246px;
+    top: -41px;
+    float: right;
+    right: 0;
+}
+
+#advancedSearchToolbarHolder {
+    right: 11px;
+    margin-top: 42px;
+    position: absolute;
+}
+
+#advancedSearchToolbarHolder.toggledOn {
+    width: 22%;
+    /*top: 12px;*/
+    float: right;
+    /*right: 0px;*/
+}
+
+#ASTopContainer #advancedSearchToolbarHolder.toggledOn {
+    top: 77px;
+    right: 0px;
+}
+
+#ASTopContainer #advancedSearchTabHolder {
+    height: 374px;
+}
+
+.advancedSearchElementContainer {
+    overflow: hidden;
+    width: 100%;
+    background-color: #f3f3f4;
+    display: table;
+}
+
+.elemComponent {
+    /*width:90px;*/
+    /*display:inline-block;*/
+    /*border:1px solid black*/
+    display: table-cell;
+    vertical-align: middle;
+    padding: 4px;
+}
+
+.elemComponent.leftCol {
+    width: 10%;
+}
+
+.elemComponent.rightCol {
+    padding-left: 8px;
+    width: 85%;
+}
+
+.objectAdvancedSearchList {
+    display: inline;
+    list-style-type: none !important;
+    padding: 0;
+}
+
+.objectAdvancedSearchList li {
+    display: block;
+    border-bottom: 1px solid #CCCCCC !important;
+    border-image: none !important;
+    border-left: 1px solid #CCCCCC !important;
+    border-top: 0 none !important;
+}
+
+#advancedSearchTabHolder {
+    overflow-x: hidden;
+    height: 430px;
+}
+
+.advSearchInput {
+    border-color: #dbdbde;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1.65em;
+    line-height: 1.65em;
+    border: 0;
+    width: 180px;
+    background-color: #ffffff !important;
+}
+
+.advSearchInput.ddl {
+    margin-bottom: 3px;
+}
+
+.advancedSearchBottomButtonGroup {
+    float: right;
+    margin-top: 5px;
+}
+
+.elemComponent .dtOptionsBar {
+    margin-top: 8px;
+    margin-bottom: -4px;
+}
+
+.autocompleteTabHolder {
+    margin-bottom: 5px;
+}
+
+.elemComponent .invalid {
+    background-color: #FFC1C1;
+}
+
+#advSearchTabButton {
+    cursor: pointer;
+    border-bottom: 3px solid #2e9dc8 !important;
+    border-radius: 5px;
+    background-color: #50c1e9;
+    height: 20px;
+    padding: 6px 0px 0px 5px;
+    margin-left: 5px;
+    font-family: OpenSans-Bold;
+    position: absolute;
+    right: 0px;
+    top: -47px;
+    color: #FFFFFF;
+}
+
+#advSearchTabButton.toggledOn {
+    background-color: #50c1e9;
+    color: #fff;
+    height: 20px;
+    border-bottom: 2px solid #2e9dc8 !important;
+    font-family: OpenSans-Bold;
+    line-height: normal;
+    padding: 8px;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 230px;
+}
+
+#advSearchTabButton.toggledOff {
+    display: inline-block;
+    width: 128px;
+}
+
+.gridToolbarWrapper {
+    position: relative;
+}
+
+.createBtnWrapper {
+    float: left;
+    margin: 5px;
+}
+
+.filterGridTab {
+    float: right;
+    position: relative;
+    z-index: 6;
+}
+
+.filterGridTab ._searchContainer {
+    position: relative;
+    float: left;
+    display: block;
+    right: -5px;
+    margin-right: 16px;
+}
+
+.asTab {
+    position: relative;
+    top: 110px;
+    right: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+.GridHolder {
+    position: relative;
+    /*float: left;*/
+}
+
+.GridHolder.collapsed {
+    width: 77%;
+}
+
+.GridHolder #PrinttoolHolder {
+    right: 134px;
+}
+
+.GridHolder.collapsed #PrinttoolHolder {
+    right: 0px;
+}
+
+.GridHolder .toolbar {
+    height: 30px;
+}
+
+.GridHolder .toolbar ._btnAddNewRecord {
+    margin-top: 4px;
+}
+
+#RecordDetailContainer.widen {
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+}
+
+.asSearchTabWrapper {
+    top: -45px;
+    position: relative;
+}
+
+.gridToolbar {
+    height: 28px;
+}
+
+.gridToolbarButton {
+    padding: 4px;
+}
+
+.gridContainer {
+    overflow: hidden;
+    padding: 5px;
+}
+
+.noprint {
+    display: none;
+}
+
+.print {
+    display: block;
+}
+
+.calendarGridHolder {
+    clear: both;
+}
+
+.k-scheduler-table td, .k-event {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+div.k-dropzone {
+    height: 100px;
+}
+
+.k-dropzone-hovered {
+    background: rgba(0, 80, 239, 0.19);
+}
+
+.InlineEditButtonBlock {
+    width: 0;
+    height: 0;
+    min-width: 0 !important;
+    min-height: 0 !important;
+}
+
+.relField ._editedElement {
+    height: 50px;
+}
+
+.relField._editBlock > div {
+    display: inline-block;
+}
+
+.relField._editBlock .inputsBlock {
+    min-width: 185px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.relField._editBlock .inputsBlock input {
+    height: 34px;
+    /*margin: 5px 0px;*/
+}
+
+.magnifier {
+    width: 20px;
+    border-radius: 2px;
+    background-color: rgba(211, 212, 216, 0.71);
+    margin: 0 auto;
+}
+
+._editBlock .k-invalid {
+    border: solid 1px red;
+}
+
+.dynamicObjectGridContainer {
+    /*width: 690px;*/
+    overflow: auto;
+}
+
+.batchUpdateBtn {
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-image: url("../img/edit.png");
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+}
+
+.simpleBlock.active {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    color: #000000;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+._keycontainer.active {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    color: #000000;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.batchEditForm input {
+    z-index: 20010;
+}
+
+.batchEditForm {
+    display: none;
+    background-color: #f3f3f4;
+    border: 1px solid #DEDBDD;
+    border-radius: 6px;
+    z-index: 20001;
+    padding: 10px;
+}
+
+.batchEditForm .inputContainer {
+    float: left;
+    width: 33%;
+}
+
+.batchEditForm .textarea {
+    width: 50%;
+}
+
+.batchEditForm .checkbox {
+    float: left;
+    width: 2%;
+}
+
+.batchEditForm .b-field-value {
+    float: right;
+    width: 45%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+}
+
+.batchEditForm .b-field-label {
+    float: left;
+    width: 45%;
+    font-weight: bold;
+    margin-left: 14px;
+}
+
+.batchEditForm .filterButton {
+    top: 23px;
+    position: relative;
+    float: right;
+}
+
+.batchEditForm .filterButton ._batchEditBtn {
+    width: 95px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.DetailContainer .imageContainer.hidden {
+    display: none;
+}
+
+.ContainerDiv.hidden {
+    display: none;
+}
+
+.ContainerDiv.widen {
+    width: 100%;
+}
+
+.batchEditOpenFormBtn {
+    padding: 0px;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    background-color: #F5F5F6;
+}
+
+.k-scheduler-toolbar .k-nav-next, .k-scheduler-toolbar ul + ul li:last-child, .k-scheduler-toolbar .k-nav-next .k-link, .k-scheduler-toolbar ul + ul li:last-child .k-link {
+    border-radius: 0;
+}
+
+.k-scheduler-toolbar > ul li:first-child, .k-scheduler-toolbar > ul li:first-child .k-link {
+    border-radius: 0;
+}
+
+.k-scheduler-toolbar.k-header, .k-scheduler-toolbar li {
+    background-color: #ffffff;
+}
+
+.k-scheduler .k-scheduler-toolbar ul li.k-state-hover, .k-scheduler .k-scheduler-toolbar ul li.k-state-selected {
+    background-color: #ffffff;
+    border-width: 1px;
+}
+
+.k-scheduler .k-scheduler-toolbar ul li.k-state-selected a {
+    color: #50AEDF;
+}
+
+.k-scheduler .k-scheduler-toolbar ul li.k-state-selected {
+    border: 2px solid #50AEDF;
+}
+
+.k-scheduler-toolbar > ul > li, .k-scheduler-footer > ul > li {
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    font-weight: bold;
+    font-style: inherit;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.k-event {
+    border-radius: 0;
+}
+
+.filterDropdownContainer .k-input {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.border-radius.k-autocomplete.k-state-border-down .k-input, .k-dropdown-wrap.k-state-border-down .k-input, .k-picker-wrap.k-state-border-down .k-input, .k-picker-wrap.k-state-border-down .k-selected-color, .k-numeric-wrap.k-state-border-down .k-input {
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0;
+}
+
+.k-dropdown-wrap .k-input {
+    border-radius: 0
+}
+
+.FirstRowContainer #advSearchTabButton {
+    top: -37px;
+    right: 0;
+}
+
+.k-alt .k-state-selected {
+    background-color: #2e9dc8;
+}
+
+.k-current-time {
+    background: #f00;
+    position: absolute;
+}
+
+.schedulerHolder {
+    position: relative;
+    display: block;
+}
+
+.schedulerHolder .speedupScheduler {
+    width: 80%;
+    float: right;
+}
+
+.schedulerResourcePanelHolder {
+    position: relative;
+    float: left;
+    /*border: solid 1px #cccccc;*/
+    width: 200px;
+    padding: 5px 10px;
+    max-height: 723px;
+    overflow: auto;
+    margin-right: 10px;
+}
+
+.k-scheduler-navigation {
+    float: left !important;
+}
+
+.k-scheduler-views {
+    float: right !important;
+}
+
+.scheduler-resource-button {
+    line-height: normal;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0 8px 2px 0px;
+    float: left;
+}
+
+.scheduler-resource-btn-img {
+    border: solid 1px #dbdbde;
+    background-size: cover;
+    width: 30px;
+    height: 28px;
+    margin: auto;
+    display: block;
+    background-image: url("../img/resource.png");
+    cursor: pointer;
+}
+
+.schedulerHolder {
+    float: left;
+}
+
+.schedulerResourcePanelHolder .fieldlist {
+    margin: 0 0 -1em;
+    padding: 0;
+}
+
+.schedulerResourcePanelHolder .fieldlist li {
+    list-style: none;
+    padding-bottom: 1em;
+}
+#schedulerResourcePanel .k-checkbox-label {
+    font-size: 14px;
+}
+
+#schedulerResourcePanel .k-checkbox-label:before {
+    top: 1px;
+}
+
+#schedulerResourcePanel .k-checkbox:checked + .k-checkbox-label:before {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+#schedulerResourcePanel .k-checkbox:checked + .k-checkbox-label:before {
+    content: "\2713";
+    font-weight: bolder;
+}
+
+#schedulerResourcePanel #rpCbxCALbl:before {
+    background-color: darkblue;
+}
+.advancedSearchBottomButtonGroup a{
+    color: "#002866"
+}

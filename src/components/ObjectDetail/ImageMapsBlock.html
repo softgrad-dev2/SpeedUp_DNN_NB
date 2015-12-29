@@ -1,0 +1,37 @@
+<div>
+    <script id="odMapsBlock" type="text/x-kendo-template">
+        <tr>
+            <td class="display-td">
+                <div class="DetailContainer">
+                    <div class="ContainerDiv"><div class="_AttachmentImages attachmentImages" ><img src="${data.ImageUrl}"/></div></div>
+                    <div class="ContainerDiv">
+                        # $.each(data.Maps, function (index, item) { #
+                        <div key="${item.PropertyName}" dtype="${item.DataType}" class="_keycontainer" >
+                            <input type="hidden" class="_hdnOldPropertyValue FixedWidthAllInputs" value="${item.PropertyValue}"/>
+                            <input type="hidden" class="_hdnOldPropertyValue FixedWidthAllInputs" value="${item.PropertyValue}"/>
+                            <div class="mapdiv" id="${item.Mapdiv}"></div>
+                            <div class="_editBlock _saveOnBlur displaynone">
+                                <input type="hidden" class="_maptypefield FixedWidthAllInputs" id="${item.MapTypeField}" value="${item.MapType}"/>
+                                <input type="hidden" class="_mapzoomfield FixedWidthAllInputs" id="${item.MapZoomField}" value="${item.MapZoom}"/>
+
+                                <div><div class="display-label prop-lbl textalignement"> Latitud:</div> <input type="text" class="_maplatfield FixedWidthAllInputs" id="${item.LatField}" value="${item.Latitude}"/> </br>
+                                    <div class="display-label prop-lbl textalignement"> Longitud:</div> <input type="text" class="_maplongfield FixedWidthAllInputs" id="${item.LongField}" value="${item.Longitude}"/>
+                                    <a id="GetAddress" onclick="$.GetAddress('${item.LatField}','${item.LongField}','${item.AddressField}','${item.Mapdiv }','${item.MapZoomField}','${item.MapTypeField}')"  href="javascript:void(0)">${$.objectLanguage.ColumnNames.GetAddress}</a></div>
+                                <div>  <div class="display-label prop-lbl textalignement"> Adress:</div> <input type="text" class="_mapaddressfield FixedWidthAllInputs" id="${item.AddressField}" value="${item.Address}"/>
+                                    <div style="display:inline-block"><a  style="margin-left:4%;" onclick="$.GetLatLongFromAddress('${item.LatField}','${item.LongField}','${item.AddressField}','${item.Mapdiv }','${item.MapZoomField}','${item.MapTypeField}')" href="javascript:void(0)">${$.objectLanguage.ColumnNames.Getcoordinates} </a></div>&nbsp;
+                                    <div style="display:inline-block"><a  style="margin-left:4%;" onclick="$.GetCurrentLocation('${item.LatField}','${item.LongField}','${item.AddressField}','${item.Mapdiv }','${item.MapZoomField}','${item.MapTypeField}')" href="javascript:void(0)">${$.objectLanguage.ColumnNames.Retrievecurrentposition} </a></div></div>
+                                <div class="InlineEditButtonBlock">
+
+                                </div>
+                            </div>
+                            <div class="_simpleBlock simpleBlock displayblock" onclick="$.InlineEditMode(this)">
+                                ${item.Address}
+                            </div>
+                        </div>
+                        #});#
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </script>
+</div>

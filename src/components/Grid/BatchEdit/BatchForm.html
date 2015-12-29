@@ -1,0 +1,80 @@
+<div id="oedb">
+    <script id="oeDetailsBlock" type="text/kendo-ui-template">
+    <table class="tbldetail _tbldetail EditTemplate">
+        # $.each(data, function (index, item) {#
+        # if((index % 3) == 0){#
+        <tr>
+            <td class="display-td" #if((index % 3) == 0 && index == (data.length -1)){# colspan="3" #}#>
+            #}#
+            <div class="inputContainer">
+                <div class="checkbox">
+                    <input type="checkbox">
+                </div>
+                # if(item.DataType=='Save'){ #
+                # } else { #
+                <div key="${item.PropertyName}"  class="b-field-label"> ${item.PropertyLabel}
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                </div>
+                # } #
+                <div key="${item.PropertyName}" dtype="${item.DataType}" class="#if(item.DataType!='RichTextBox' && item.DataType !='TextBox'){ # b-field-value #} else{# padleft15 #}# _keycontainer">
+                    # if(item.DataType=='URL'){ #
+                    <input type="text" class="FixedWidthAllInputs" id="txt${item.PropertyName}" value="${item.PropertyValue}" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # } else if(item.DataType=='DateTime'){ #
+                    <input item-role="datepicker" v-type='DateTime' value="${item.PropertyValue}" id="txtdateTime${item.PropertyName}" class="_dateTimePicker datetimeWidth" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # } else if(item.DataType=='Date'){ #
+                    <input item-role="datepicker" v-type='Date'  value="" id="txtdate${item.PropertyName}" class="_datePicker datepickerWidth" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # } else if(item.DataType=='Time'){ #
+                    <input item-role="datepicker" value="${item.PropertyValue}" id="txttime${item.PropertyName}" class="_timePicker timepickerWidth" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # } else if(item.DataType=='RichTextBox'){ #
+                    <textarea id="richtxt${item.PropertyName}" class="_richtextbox FixedWidthAllInputs" rows="5" cols="5" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" #>#=item.PropertyValue#  </textarea>
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # } else if(item.DataType=='TrueFalse'){ #
+                    <input id="chk${item.PropertyName}" type="checkbox" #=item.PropertyValue ==1 ? "checked=checked" : "" #  ></input>
+                    # } else if(item.DataType=='MultiSelectList' || item.DataType=='SearchableDropDownList' || item.DataType=='DropDownList'){ #
+                    <select class="multiselectWidth" id="${item.PropertyName}" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" #></select>
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    #} else if(item.DataType=='TextBox'){ #
+                    <textarea id="txt${item.PropertyName}" class="_multiline textarea" rows="5" cols="5" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" #>#=item.PropertyValue#  </textarea>
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # }  else if(item.DataType=='Formula' || item.DataType=='Summary' ){ #
+                    <span > #=item.PropertyValue# </span>
+                    #}  else if(item.DataType=='NumericText' || item.DataType=='Numeric'){ #
+                    <input id="txtNum${item.PropertyName}" class="_numericText numerictextboxWidth" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # } else if(item.DataType=='ObjectRelationship' ){ #
+                    <input id="hdn${item.PropertyName}" type="hidden" value="${item.ObjectId}" class="_objectRelationShip FixedWidthAllInputs" />
+                    <input id="txt${item.PropertyName}" type="text" value="${item.ObjectName}" class="_objectRelationShip FixedWidthAllInputs" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                    <input type="image" class="_objRelButton" src=#=data.helpers.getPluginImageUrl("JS/img/search.png")#  />
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # } else if(item.DataType=='ParentRelationship'){ #
+                    <input id="hdn${item.PropertyName}" type="hidden" value="${item.ObjectId}" class="_objectRelationShip FixedWidthAllInputs" />
+                    <input id="txt${item.PropertyName}" type="text" value="${item.ObjectName}" class="_objectRelationShip FixedWidthAllInputs" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                    <input type="image" class="_objRelButton" src=#=data.helpers.getPluginImageUrl("JS/img/search.png")#  />
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    #} else if(item.DataType=='MultiObjectRelationshipField'){ #
+                    <input id="hdn${item.PropertyName}" type="hidden" value="${item.ObjectId}" class="_objectRelationShip FixedWidthAllInputs" />
+                    <input id="txt${item.PropertyName}" type="text" value="${item.ObjectName}" class="_objectRelationShip FixedWidthAllInputs" />
+                    <select class="DropdownlistWidth" id="ddl${item.PropertyName}"></select>
+                    <input type="image" class="_objRelButton" src=#=data.helpers.getPluginImageUrl("JS/img/search.png")# />
+                    #} else { #
+                    <input type="text" class="FixedWidthAllInputs" id="txt${item.PropertyName}" value="${item.PropertyValue}" #=item.Required ==1 ? "required" : "" # #=item.Required ==1 ? "data-required-msg=*" : "" # />
+                    <div class="#if(item.Required ==1 && item.SystemProperty!= 1){ # require-label #}else{ # nonrequire-label # }#"> * </div>
+                    # } #
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            #if((index % 3) == 2){#
+            </td>
+        </tr>
+        #}#
+        #});#
+    </table>
+        <div class="filterButton">
+            <input type="button" class="_batchEditBtn" value="${ data.editBtnTitle }">
+        </div>
+    </script>
+</div>
