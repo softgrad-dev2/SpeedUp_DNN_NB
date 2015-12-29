@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test new backend</title>
+    <!--REQUIRED-->
+    <link href="SpeedUp.ObjectManagement.ClientSideViewer/styles/KendoCss/kendo.mobile.all.min.css" rel="stylesheet" />
+    <!--OPTIONAL-->
+    <link href="SpeedUp.ObjectManagement.ClientSideViewer/styles/common.css?v5" rel="stylesheet" />
+    <!--OPTIONAL-->
+    <link href="SpeedUp.ObjectManagement.ClientSideViewer/styles/DemoStyle.css?v2" rel="stylesheet" />
+    <link rel="stylesheet" href="SpeedUp.ObjectManagement.ClientSideViewer/styles/KendoCss/kendo.mobile.all.min.css" />
+    <!--vendor styles-->
+    <link rel="stylesheet" href="src/vendor/KendoALL/styles/kendo.common.min.css"/>
+    <link rel="stylesheet" href="src/vendor/KendoALL/styles/kendo.silver.min.css"/>
+    <link rel="stylesheet" href="src/vendor/JQuery/AnythingSlider/anythingslider.css"/>
+    <!--our styles-->
+    <link rel="stylesheet" href="src/assets/style/style.css?v21"/>
+    <link rel="stylesheet" href="src/assets/style/notifications.css">
+</head>
+<body>
+
+<!-- OPEN LAYERS -->
+<script src="src/vendor/OpenLayers/OpenLayers.js"></script>
+<script src="src/vendor/OpenLayers/OM.EditRecord.Map.OpenLayer.js?v1"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN9HTEFQFROrHjbvepBHdvAWfQDuyXJHs&sensor=false"> </script>
+
+
+<div>
+    <div id="TopContainer" ng-app="speedup.CSVModule" ng-controller="PageLogicController">
+        <div class="FirstRowContainer">
+            <advancedsearchtabbutton></advancedsearchtabbutton>
+            <!--<filterTabButton></filterTabButton>-->
+            <speedup-scheduler></speedup-scheduler>
+        </div>
+        <!--<advancedsearchtab as-options="asOptions"></advancedsearchtab>-->
+        <!--<filterTab filter-options="filterOptions"> </filterTab>-->
+        <div ng-controller="GridController" class="calendarGridHolder">
+            <speedup-grid parameters="gridParameters"></speedup-grid>
+        </div>
+    </div>
+</div>
+
+<!-- LIBRARIES -->
+<script src="src/vendor/JQuery/jquery-1.10.2.js"></script>
+<script src="src/vendor/JQuery/jquery-ui.js"></script>
+<script src="src/vendor/JQuery/AnythingSlider/jquery.anythingslider.js"></script>
+<script src="src/vendor/Angular/angular.js"></script>
+<script src="src/vendor/Angular/angular-cookies.js"></script>
+<script src="src/vendor/Angular/angular-resource.js"></script>
+<script src="src/vendor/KendoALL/kendo_beautified.js"></script>
+<!--<script src="src/vendor/KendoALL/kendo.all.min.js"></script>-->
+<script src="src/vendor/KendoALL/kendo.angular.min.js"></script>
+<script src="src/vendor/KendoALL/kendo.timezones.min.js"></script>
+<script src="src/vendor/KendoALL/kendo.messages.sv-SE.min.js"></script>
+<script src="src/vendor/KendoALL/kendo.culture.sv-SE.min.js"></script>
+
+<script type="text/javascript">
+    var acData = [];
+
+    var pageConfig = {
+        token: "FMSDGPQPLZKAGGFICMCK",
+        JSONStructure: "",
+        userName: 'admin',
+        objectDefinitionName: 'Work_Order',
+        selectedColumns: ",Name,Customer,Description,Status,Estimated_Time_min,Approved_By_WorkLeader,ChangedBy,ChangedDate,{FirstPicture}",
+        pageTemplateName: "Default",
+        defaultSortOrder: "[CreatedDate] Desc",
+        perspectivePageTemplate: "{}",
+        hfPerspectiveFilter: "{}",
+        //TODO: real API base urls
+        baseUrl: 'SpeedUp.ObjectManagement.API/OMAPI.svc/rest'
+    }
+</script>
+
+
+<!--Minified scripts-->
+<script src="build/ViewObjectDataGridCalendar/js/main.js?v56"></script>
+<!--<script src="build/ViewObjectDataGridCalendar/js/main.min.js"></script>-->
+
+
+</body>
+</html>
