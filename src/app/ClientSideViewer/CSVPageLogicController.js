@@ -16,13 +16,14 @@ var CSVapp = angular.module('speedup.CSVModule',
 
         // Init Schema
         schemaService.Init();
-        // Prepare autocomplete data
-        // (here acData is global variable from incoming .js files)
-        if (typeof(acData) != 'undefined') {
-            autocompleteService.prepareACData(acData);
-        }
-        // LOAD list values for both objects
-        listDataLoaderService.fetchMultipleListsData(objectDefinitionName);
+        // TODO: cut restore later
+//        // Prepare autocomplete data
+//        // (here acData is global variable from incoming .js files)
+//        if (typeof(acData) != 'undefined') {
+//            autocompleteService.prepareACData(acData);
+//        }
+//        // LOAD list values for both objects
+//        listDataLoaderService.fetchMultipleListsData(objectDefinitionName);
     }]);
 
 CSVapp.controller("PageLogicController", ["$scope", "$rootScope", "configService",

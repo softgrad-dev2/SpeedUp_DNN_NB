@@ -16,6 +16,8 @@
     <!--our styles-->
     <link rel="stylesheet" href="src/assets/style/style.css?v21"/>
     <link rel="stylesheet" href="src/assets/style/notifications.css">
+
+    <link rel="stylesheet" href="globalStyle.css">
 </head>
 <body>
 
@@ -26,7 +28,8 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN9HTEFQFROrHjbvepBHdvAWfQDuyXJHs&sensor=false"> </script>
 
 
-<div>
+<div class="globalContentWrapper">
+    <div class="blueHeader"></div>
     <div id="TopContainer" ng-app="speedup.CSVModule" ng-controller="PageLogicController">
         <!--<div class="FirstRowContainer">-->
             <!--<advancedsearchtabbutton></advancedsearchtabbutton>-->
@@ -69,7 +72,7 @@
         perspectivePageTemplate: "{}",
         hfPerspectiveFilter: "{}",
         //TODO: real API base urls
-        baseUrl: 'SpeedUp.ObjectManagement.API/OMAPI.svc/rest'
+        baseUrl: 'http://localhost/speedup_dnn/desktopmodules/SpeedUp.ObjectManagement.API/OMAPI.svc/rest'
     }
 </script>
 

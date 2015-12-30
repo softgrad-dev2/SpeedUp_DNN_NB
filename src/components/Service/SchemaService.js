@@ -3,8 +3,7 @@
  */
 CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCacheService',
     'printTemplateCacheService', 'pageTemplateObjectService', 'pageTemplateObjectCacheService',
-    function ($q, $http, configService, conversionCacheService, printTemplateCacheService,
-              pageTemplateObjectService, pageTemplateObjectCacheService) {
+    function ($q, $http, configService, conversionCacheService, printTemplateCacheService, pageTemplateObjectService, pageTemplateObjectCacheService) {
 
         var gConfig = configService.getGlobalConfig();
         var odn = gConfig.objectDefinitionName;
@@ -399,17 +398,11 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
                 PostData.Clear();
                 PostData.RequestType = "Heads";
 
-                $.ajax({
-                    type: "GET",
-                    url: url,
-                    data: PostData,
-                    dataType: "json",
-                    success: function (columnslist) {
-                        _fillSchema(columnslist, odn);
-                        var schemaObject = SchemaService.GetSchemaByObjectDefinitionName(odn);
-                        deferred.resolve(schemaObject);
-                    },
-                    error: function (xhr, ajaxOptions, thrownError) {
+                $http.get(url).success(function (columnslist) {
+                    _fillSchema(columnslist, odn);
+                    var schemaObject = SchemaService.GetSchemaByObjectDefinitionName(odn);
+                    deferred.resolve(schemaObject);
+                }).error(function (xhr, ajaxOptions, thrownError) {
                         var responseCodeValue = xhr.getResponseHeader('ResponseCode');
                         if (responseCodeValue == "UnAuthorized") {
                             deferred.reject(xhr.getResponseHeader('ResponseCode'));
@@ -418,8 +411,17 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
                             deferred.reject(urlBase + ":=:" + xhr.status + ' ' + ajaxOptions + ' ' + thrownError);
                         }
                     }
-                });
-            } else {
+                );
+            }
+//                $.ajax({
+//                    type: "GET",
+//                    url: url,
+//                    data: PostData,
+//                    dataType: "json",
+//                    success: ,
+//                    error: );
+//            }
+            else {
                 deferred.reject("Wrong url 'getObjectSchema' in _fetchSchema method");
             }
 

@@ -68,9 +68,10 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
                     transport: {
                         read: {
                             cache: false,
-                            url: configService.getUrlBase('objectRecordList') + "/" + gConfig.token,
+                            url: 'http://185.31.160.22/shop',
+//                            url: configService.getUrlBase('objectRecordList') + "/" + gConfig.token,
                             type: "POST",
-                            dataType: "json"
+                            dataType: "xml"
                         },
                         parameterMap: function (options) {
                             return GridHelper.parameterMap(options, parameters);
@@ -308,8 +309,10 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
         /// <param name="response">API response</param>
         GridHelper.parse = function (response) {
             try {
-                if (response != null && response.length > 0)
-                    response = $.parseJSON(response);
+                response = _parseXMLResponse(response);
+//                if (response != null && response.length > 0)
+//                    response = _parseXMLResponse(response);
+////                    response = $.parseJSON(response);
                 response.forEach(function (entry) {
                     _updateImage(entry);
                 });
@@ -321,6 +324,26 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
 
             return response || "";
         };
+        function _parseXMLResponse(response){
+            debugger;
+            var entries = [];
+            $(response).find('EntityItem').each(function(k, entry){
+                var object = {};
+                for(var attrKey in entry.attributes){
+                    if(entry.attributes.hasOwnProperty(attrKey)){
+                        var attrName = entry.attributes[attrKey]['name'];
+                        object[attrName] = entry.attributes[attrKey]['value'];
+                    }
+                }
+                $(entry).find('Attributes').children().each(function(i, attr){
+                    var attrName = attr['tagName'];
+                    object[attrName] = attr['textContent'];
+                });
+                entries.push(object);
+            });
+
+            return entries;
+        }
         /// <summary>
         /// method called before API call to form parameters string for API call
         /// </summary>
@@ -369,7 +392,32 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
                 parameters.customASFilters = gridParameters.customASFilters;
             }
 
-            return JSON.stringify(parameters);
+            // todo: revert
+            var str = JSON.stringify(parameters);
+            var xml = json2xml(str);
+            debugger;
+
+            var xml = '<?xml version="1.0" encoding="utf-8" ?>'+
+            '<Context ID="Shop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'+
+            '<TypeName>Issue</TypeName>'+
+            '<OperationName>SearchObject</OperationName>'+
+            ' <Filters>'+
+            '    <Filter>'+
+            '           <String>lorem</String>'+
+            '       </Filter>'+
+            '   </Filters>'+
+            '   <ResultSet>'+
+            '       <Sorting TypeSort="Asc">'+
+            '           <Column>Description</Column>'+
+            '       </Sorting>'+
+            '       <Pager>'+
+            '           <Page>1</Page>'+
+            '           <Count>100</Count>'+
+            '       </Pager>'+
+            '   </ResultSet>'+
+            '</Context>';
+
+            return xml;
         };
 
         /// <summary>

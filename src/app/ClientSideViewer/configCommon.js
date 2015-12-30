@@ -5,7 +5,7 @@ var pageConfig = angular.merge({}, pageConfig, {
     modelId: 'ObjectEntry_ID',
     templateVersion: '13',    // increment if you need to reload cached angular templates
     objectDetailPageSize: 5,
-    environment: 'test',    // local, test or prod
+    environment: 'local',    // local, test or prod
     gridPageSize: 10,
     inlineSaveMethod: 'local',      // 'local' || 'server' - method of saving inline field
     gridContainer: "#mainGrid",
