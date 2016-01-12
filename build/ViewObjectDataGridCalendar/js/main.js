@@ -8025,7 +8025,7 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
             var deferred = $q.defer();
             var objSchema = SchemaService.GetSchemaByObjectDefinitionName(objectDefinitionname);
             if (objSchema == null || objSchema == undefined) {
-                _fetchSchema(objectDefinitionname).then(function (schemaObject) {
+                _fetchSchemaXML(objectDefinitionname).then(function (schemaObject) {
                     deferred.resolve(schemaObject);
                 }, deferred.reject)
             }
@@ -8064,7 +8064,7 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
             var jsonStructure = gConfig.jsonStructure;
             _preserveSchemaJsonStructure(jsonStructure);
             if (!SchemaService.GetSchemaByObjectDefinitionName(odn)) {
-                _fetchSchema(odn);
+                _fetchSchemaXML(odn);
             }
         };
 
@@ -8083,7 +8083,7 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
             var emptySchema = [];
             var emptyObject = {};
             if (objSchema == undefined || objSchema == null || objSchema.AllColumnsList.length == 0) {
-                _fetchSchema(objectDefinitionName).then(function (schemaObj) {
+                _fetchSchemaXML(objectDefinitionName).then(function (schemaObj) {
                     var columnsList = schemaObj.AllColumnsList;
                     for (var column in columnsList) {
                         if (columnsList[column].Visible != undefined || columnsList[column].Visible != null || columnsList[column].Visible == true || columnsList[column].Visible == undefined) {
@@ -8257,13 +8257,47 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
                         fieldsSelected4Template = _getVisibleFields(fields, jsonSettings, propViewType);
                         deferred.resolve(fieldsSelected4Template);
                     }
-                    _fetchSchema(odn).then(successClbk, errorClbk);
+                    _fetchSchemaXML(odn).then(successClbk, errorClbk);
                 });
             }
 
             return deferred.promise;
         }
 
+        function _fetchSchemaXML(odn){
+                var deferred = $q.defer();
+
+                var url = configService.getUrlBase('getObjectSchema');
+                    var PostData = '<Context   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'+
+                        '<TypeName>Order</TypeName>'+
+                        '<OperationName>GetObjectMetaData</OperationName>'+
+                        '</Context>';
+            debugger;
+            $.ajax({
+                type: 'post',
+                dataType: 'xml',
+                data: PostData,
+                url: url
+            }).success(function (response) {
+                    var columnslist = parseXMLResponse(response);
+                    _fillSchema(columnslist, odn);
+                    var schemaObject = SchemaService.GetSchemaByObjectDefinitionName(odn);
+                    deferred.resolve(schemaObject);
+                }).error(function (xhr, ajaxOptions, thrownError) {
+                    var responseCodeValue = xhr.getResponseHeader('ResponseCode');
+                    if (responseCodeValue == "UnAuthorized") {
+                        deferred.reject(xhr.getResponseHeader('ResponseCode'));
+                    }
+                    else {
+                        deferred.reject(url + ":=:" + xhr.status + ' ' + ajaxOptions + ' ' + thrownError);
+                    }
+                });
+
+            return deferred.promise;
+        }
+        function _parseXMLResponse(response){
+            debugger;
+        }
         // CHECKED
         /// <summary>
         /// Method to fetch schema from API
