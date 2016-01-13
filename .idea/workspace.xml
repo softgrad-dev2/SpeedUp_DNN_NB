@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f179aca8-5947-4812-a042-c2a4b245d2df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Grid/GridDataService.js" afterPath="$PROJECT_DIR$/src/components/Grid/GridDataService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Grid/GridHelper.js" afterPath="$PROJECT_DIR$/src/components/Grid/GridHelper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Grid/GridController.js" afterPath="$PROJECT_DIR$/src/components/Grid/GridController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Service/SchemaService.js" afterPath="$PROJECT_DIR$/src/components/Service/SchemaService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SpeedUp_DNN_NB.iml" afterPath="$PROJECT_DIR$/.idea/SpeedUp_DNN_NB.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SpeedUp_DNN_NB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +30,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="26" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-5.352941" vertical-offset="1858" max-vertical-offset="2760">
+            <state line="69" column="52" selection-start="3241" selection-end="3241" vertical-scroll-proportion="-7.9411764" vertical-offset="1800" max-vertical-offset="2760">
               <folding />
             </state>
           </provider>
@@ -42,7 +39,16 @@
       <file leaf-file-name="SchemaService.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Service/SchemaService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="445" column="31" selection-start="19274" selection-end="19274" vertical-scroll-proportion="0.0" vertical-offset="13166" max-vertical-offset="21540">
+            <state line="462" column="25" selection-start="19836" selection-end="19836" vertical-scroll-proportion="0.0" vertical-offset="13586" max-vertical-offset="22020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GridController.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Grid/GridController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="35" selection-start="826" selection-end="826" vertical-scroll-proportion="0.6138107" vertical-offset="450" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -69,7 +75,7 @@
       <file leaf-file-name="GridHelper.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Grid/GridHelper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="412" column="51" selection-start="18804" selection-end="18804" vertical-scroll-proportion="-6.44" vertical-offset="12199" max-vertical-offset="14820">
+            <state line="412" column="51" selection-start="18804" selection-end="18804" vertical-scroll-proportion="-24.44" vertical-offset="11749" max-vertical-offset="14820">
               <folding>
                 <marker date="1452690111632" expanded="false" signature="1648:1672" placeholder="..." />
               </folding>
@@ -80,7 +86,7 @@
       <file leaf-file-name="GridSchemaService.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Grid/GridSchemaService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="63" selection-start="1927" selection-end="1927" vertical-scroll-proportion="-6.44" vertical-offset="919" max-vertical-offset="3420">
+            <state line="13" column="39" selection-start="502" selection-end="533" vertical-scroll-proportion="-4.04" vertical-offset="289" max-vertical-offset="3420">
               <folding />
             </state>
           </provider>
@@ -95,29 +101,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GridDataService.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GridDataService.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Grid/GridDataService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="24" selection-start="6956" selection-end="6956" vertical-scroll-proportion="0.33248082" vertical-offset="3890" max-vertical-offset="5370">
+            <state line="134" column="24" selection-start="6956" selection-end="6956" vertical-scroll-proportion="0.0" vertical-offset="3890" max-vertical-offset="5370">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchedulerParametersService.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Sheduler/SchedulerParametersService.js">
+      <file leaf-file-name="GridColumnsService.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Grid/GridColumnsService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="42" selection-start="6314" selection-end="6314" vertical-scroll-proportion="0.0" vertical-offset="4008" max-vertical-offset="5820">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Common/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="233" column="1" selection-start="9760" selection-end="9760" vertical-scroll-proportion="0.0" vertical-offset="6579" max-vertical-offset="7170">
-              <folding />
+            <state line="287" column="36" selection-start="15878" selection-end="15897" vertical-scroll-proportion="-4.88" vertical-offset="8488" max-vertical-offset="19650">
+              <folding>
+                <marker date="1451378874238" expanded="false" signature="1308:1319" placeholder="..." />
+                <marker date="1451378874238" expanded="false" signature="14757:14768" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,11 +146,12 @@
         <option value="$PROJECT_DIR$/src/app/ClientSideViewer/CSVPageLogicController.js" />
         <option value="$PROJECT_DIR$/src/components/Common/common.js" />
         <option value="$PROJECT_DIR$/src/components/Sheduler/SchedulerHelper.js" />
-        <option value="$PROJECT_DIR$/src/components/Service/SchemaService.js" />
         <option value="$PROJECT_DIR$/src/components/Grid/GridHelper.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/components/Grid/GridDataService.js" />
         <option value="$PROJECT_DIR$/src/components/Grid/GridDrective.js" />
+        <option value="$PROJECT_DIR$/src/components/Service/SchemaService.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/components/Grid/GridController.js" />
       </list>
     </option>
   </component>
@@ -282,7 +283,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20877193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1390169" sideWeight="0.79122806" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16282642" sideWeight="0.79122806" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982457" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -308,18 +309,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/q/q.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="61620" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/globalStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="167" column="5" selection-start="3063" selection-end="3063" vertical-scroll-proportion="0.0" vertical-offset="4829" max-vertical-offset="5730" />
@@ -370,36 +359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="26" selection-start="3186" selection-end="3186" vertical-scroll-proportion="-5.352941" vertical-offset="1858" max-vertical-offset="2760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Grid/GridHelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="412" column="51" selection-start="18804" selection-end="18804" vertical-scroll-proportion="-6.44" vertical-offset="12199" max-vertical-offset="14820">
-          <folding>
-            <marker date="1452690111632" expanded="false" signature="1648:1672" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Service/SchemaService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="445" column="31" selection-start="19274" selection-end="19274" vertical-scroll-proportion="0.0" vertical-offset="13166" max-vertical-offset="21540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Grid/GridSchemaService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="63" selection-start="1927" selection-end="1927" vertical-scroll-proportion="-6.44" vertical-offset="919" max-vertical-offset="3420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Grid/GridDrective.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="60" selection-start="1692" selection-end="1692" vertical-scroll-proportion="0.0" vertical-offset="876" max-vertical-offset="4200">
@@ -409,7 +368,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Grid/GridDataService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="24" selection-start="6956" selection-end="6956" vertical-scroll-proportion="0.33248082" vertical-offset="3890" max-vertical-offset="5370">
+        <state line="134" column="24" selection-start="6956" selection-end="6956" vertical-scroll-proportion="0.0" vertical-offset="3890" max-vertical-offset="5370">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Grid/GridColumnsService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="287" column="36" selection-start="15878" selection-end="15897" vertical-scroll-proportion="-4.88" vertical-offset="8488" max-vertical-offset="19650">
+          <folding>
+            <marker date="1451378874238" expanded="false" signature="1308:1319" placeholder="..." />
+            <marker date="1451378874238" expanded="false" signature="14757:14768" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Grid/GridSchemaService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="39" selection-start="502" selection-end="533" vertical-scroll-proportion="-4.04" vertical-offset="289" max-vertical-offset="3420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Grid/GridHelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="412" column="51" selection-start="18804" selection-end="18804" vertical-scroll-proportion="-24.44" vertical-offset="11749" max-vertical-offset="14820">
+          <folding>
+            <marker date="1452690111632" expanded="false" signature="1648:1672" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="52" selection-start="3241" selection-end="3241" vertical-scroll-proportion="-7.9411764" vertical-offset="1800" max-vertical-offset="2760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Service/SchemaService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="462" column="25" selection-start="19836" selection-end="19836" vertical-scroll-proportion="0.0" vertical-offset="13586" max-vertical-offset="22020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Grid/GridController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="35" selection-start="826" selection-end="826" vertical-scroll-proportion="0.6138107" vertical-offset="450" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>
