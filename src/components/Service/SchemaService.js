@@ -386,23 +386,23 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
         function _fetchSchemaXML(odn){
                 var deferred = $q.defer();
 
-                var url = configService.getUrlBase('getObjectSchema');
+                var url = 'http://185.31.160.22/shop';
                     var PostData = '<Context   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'+
-                        '<TypeName>Order</TypeName>'+
+                        '<TypeName>'+ odn +'</TypeName>'+
                         '<OperationName>GetObjectMetaData</OperationName>'+
                         '</Context>';
-            debugger;
             $.ajax({
                 type: 'post',
                 dataType: 'xml',
                 data: PostData,
                 url: url
             }).success(function (response) {
-                    var columnslist = parseXMLResponse(response);
+                    var columnslist = _parseXMLResponse(response);
                     _fillSchema(columnslist, odn);
                     var schemaObject = SchemaService.GetSchemaByObjectDefinitionName(odn);
                     deferred.resolve(schemaObject);
                 }).error(function (xhr, ajaxOptions, thrownError) {
+                    debugger;
                     var responseCodeValue = xhr.getResponseHeader('ResponseCode');
                     if (responseCodeValue == "UnAuthorized") {
                         deferred.reject(xhr.getResponseHeader('ResponseCode'));
@@ -414,8 +414,45 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
 
             return deferred.promise;
         }
+        var _mappedProperties = {
+            "Name": "PropertyName",
+            "Type": "DataType",
+            "Mandatory": "IsRequired"
+        };
+        function _getMapppedPropertyName(propertyName){
+            return _mappedProperties[propertyName] || propertyName;
+        }
+        var _mappedDataTypes = {
+            "String": "Text",
+            "Int32": "Numeric"
+        }
+        function _getMapppedDataType(dataType){
+            return _mappedDataTypes[dataType] || dataType;
+        }
         function _parseXMLResponse(response){
-            debugger;
+            var properties = [{
+                PropertyName: "CreatedDate",
+                DataType: gConfig.dataTypes.Date
+            }];
+            $(response).find('EntityItem').each(function(k, entry){
+                $(entry).find('Attributes').children().each(function(i, attr){
+                    var property = {};
+                    for (i = 0; i <attr.attributes.length; i++) {
+                        var propertyName = attr.attributes[i].name;
+                        var mappedPropName = _getMapppedPropertyName(propertyName);
+                        var propertyValue = attr.attributes[i].nodeValue;;
+                        if(mappedPropName == "DataType"){
+                            property[mappedPropName] = _getMapppedDataType(propertyValue);
+                        } else{
+                            property[mappedPropName] = propertyValue;
+                        }
+                    }
+                    properties.push(property);
+                });
+
+            });
+
+            return properties;
         }
         // CHECKED
         /// <summary>

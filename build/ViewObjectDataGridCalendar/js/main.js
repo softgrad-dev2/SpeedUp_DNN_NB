@@ -8267,23 +8267,23 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
         function _fetchSchemaXML(odn){
                 var deferred = $q.defer();
 
-                var url = configService.getUrlBase('getObjectSchema');
+                var url = 'http://185.31.160.22/shop';
                     var PostData = '<Context   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'+
-                        '<TypeName>Order</TypeName>'+
+                        '<TypeName>'+ odn +'</TypeName>'+
                         '<OperationName>GetObjectMetaData</OperationName>'+
                         '</Context>';
-            debugger;
             $.ajax({
                 type: 'post',
                 dataType: 'xml',
                 data: PostData,
                 url: url
             }).success(function (response) {
-                    var columnslist = parseXMLResponse(response);
+                    var columnslist = _parseXMLResponse(response);
                     _fillSchema(columnslist, odn);
                     var schemaObject = SchemaService.GetSchemaByObjectDefinitionName(odn);
                     deferred.resolve(schemaObject);
                 }).error(function (xhr, ajaxOptions, thrownError) {
+                    debugger;
                     var responseCodeValue = xhr.getResponseHeader('ResponseCode');
                     if (responseCodeValue == "UnAuthorized") {
                         deferred.reject(xhr.getResponseHeader('ResponseCode'));
@@ -8295,8 +8295,45 @@ CSVapp.factory('schemaService', ['$q', '$http', 'configService', 'conversionCach
 
             return deferred.promise;
         }
+        var _mappedProperties = {
+            "Name": "PropertyName",
+            "Type": "DataType",
+            "Mandatory": "IsRequired"
+        };
+        function _getMapppedPropertyName(propertyName){
+            return _mappedProperties[propertyName] || propertyName;
+        }
+        var _mappedDataTypes = {
+            "String": "Text",
+            "Int32": "Numeric"
+        }
+        function _getMapppedDataType(dataType){
+            return _mappedDataTypes[dataType] || dataType;
+        }
         function _parseXMLResponse(response){
-            debugger;
+            var properties = [{
+                PropertyName: "CreatedDate",
+                DataType: gConfig.dataTypes.Date
+            }];
+            $(response).find('EntityItem').each(function(k, entry){
+                $(entry).find('Attributes').children().each(function(i, attr){
+                    var property = {};
+                    for (i = 0; i <attr.attributes.length; i++) {
+                        var propertyName = attr.attributes[i].name;
+                        var mappedPropName = _getMapppedPropertyName(propertyName);
+                        var propertyValue = attr.attributes[i].nodeValue;;
+                        if(mappedPropName == "DataType"){
+                            property[mappedPropName] = _getMapppedDataType(propertyValue);
+                        } else{
+                            property[mappedPropName] = propertyValue;
+                        }
+                    }
+                    properties.push(property);
+                });
+
+            });
+
+            return properties;
         }
         // CHECKED
         /// <summary>
@@ -13395,7 +13432,6 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
             return response || "";
         };
         function _parseXMLResponse(response){
-            debugger;
             var entries = [];
             $(response).find('EntityItem').each(function(k, entry){
                 var object = {};
@@ -13444,32 +13480,32 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
             }
             // cache recordCountFilterExpression
             gridParameters.recordCountFilterExpression = recordCountFilterExpression;
-            var parameters = {
-                PageSize: options.pageSize,
-                PageNumber: options.page - 1,
-                Token: gConfig.token,
-                RequestType: "Detail",
-                ObjectDefinitionName: gridParameters.odn,
-                OrderByExpression: options.sort ?
-                    gridFilterExpressionService.getSortExpression(options.sort) :
-                    gConfig.defaultSortOrder,
-                FilterExpression: recordCountFilterExpression,
-                SelectedGridColumns: "*",
-                GenericSearch: gridParameters.genericSearch
-            };
-            // add advanced search custom filters, if present
-            if (gridParameters.customASFilters) {
-                parameters.customASFilters = gridParameters.customASFilters;
-            }
-
-            // todo: revert
-            var str = JSON.stringify(parameters);
-            var xml = json2xml(str);
-            debugger;
+//            var parameters = {
+//                PageSize: options.pageSize,
+//                PageNumber: options.page - 1,
+//                Token: gConfig.token,
+//                RequestType: "Detail",
+//                ObjectDefinitionName: gridParameters.odn,
+//                OrderByExpression: options.sort ?
+//                    gridFilterExpressionService.getSortExpression(options.sort) :
+//                    gConfig.defaultSortOrder,
+//                FilterExpression: recordCountFilterExpression,
+//                SelectedGridColumns: "*",
+//                GenericSearch: gridParameters.genericSearch
+//            };
+//            // add advanced search custom filters, if present
+//            if (gridParameters.customASFilters) {
+//                parameters.customASFilters = gridParameters.customASFilters;
+//            }
+//
+//            // todo: revert
+//            var str = JSON.stringify(parameters);
+//            var xml = json2xml(str);
+//            debugger;
 
             var xml = '<?xml version="1.0" encoding="utf-8" ?>'+
             '<Context ID="Shop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'+
-            '<TypeName>Issue</TypeName>'+
+            '<TypeName>'+ gridParameters.odn +'</TypeName>'+
             '<OperationName>SearchObject</OperationName>'+
             ' <Filters>'+
             '    <Filter>'+
@@ -13481,8 +13517,8 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
             '           <Column>Description</Column>'+
             '       </Sorting>'+
             '       <Pager>'+
-            '           <Page>1</Page>'+
-            '           <Count>100</Count>'+
+            '           <Page>'+ (options.page - 1) +'</Page>'+
+            '           <Count>' + options.pageSize + '</Count>'+
             '       </Pager>'+
             '   </ResultSet>'+
             '</Context>';
@@ -14343,6 +14379,8 @@ speedupGridModule.factory('gridDataService', ['$http', '$q', 'configService',
         /// <param name="objsettings">has ObjectDefinationName, token</param>
         /// <param name="filterExpression">has filterExpression applied by user</param>
         GridDataService.getTotalRecords = function (gridParameters) {
+            // TODO: remove
+            return 10;
             var filterExpression = gridParameters.filterExpression;
             var totalRecords = 0;
             PostData.Clear();

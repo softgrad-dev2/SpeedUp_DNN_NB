@@ -325,7 +325,6 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
             return response || "";
         };
         function _parseXMLResponse(response){
-            debugger;
             var entries = [];
             $(response).find('EntityItem').each(function(k, entry){
                 var object = {};
@@ -374,32 +373,32 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
             }
             // cache recordCountFilterExpression
             gridParameters.recordCountFilterExpression = recordCountFilterExpression;
-            var parameters = {
-                PageSize: options.pageSize,
-                PageNumber: options.page - 1,
-                Token: gConfig.token,
-                RequestType: "Detail",
-                ObjectDefinitionName: gridParameters.odn,
-                OrderByExpression: options.sort ?
-                    gridFilterExpressionService.getSortExpression(options.sort) :
-                    gConfig.defaultSortOrder,
-                FilterExpression: recordCountFilterExpression,
-                SelectedGridColumns: "*",
-                GenericSearch: gridParameters.genericSearch
-            };
-            // add advanced search custom filters, if present
-            if (gridParameters.customASFilters) {
-                parameters.customASFilters = gridParameters.customASFilters;
-            }
-
-            // todo: revert
-            var str = JSON.stringify(parameters);
-            var xml = json2xml(str);
-            debugger;
+//            var parameters = {
+//                PageSize: options.pageSize,
+//                PageNumber: options.page - 1,
+//                Token: gConfig.token,
+//                RequestType: "Detail",
+//                ObjectDefinitionName: gridParameters.odn,
+//                OrderByExpression: options.sort ?
+//                    gridFilterExpressionService.getSortExpression(options.sort) :
+//                    gConfig.defaultSortOrder,
+//                FilterExpression: recordCountFilterExpression,
+//                SelectedGridColumns: "*",
+//                GenericSearch: gridParameters.genericSearch
+//            };
+//            // add advanced search custom filters, if present
+//            if (gridParameters.customASFilters) {
+//                parameters.customASFilters = gridParameters.customASFilters;
+//            }
+//
+//            // todo: revert
+//            var str = JSON.stringify(parameters);
+//            var xml = json2xml(str);
+//            debugger;
 
             var xml = '<?xml version="1.0" encoding="utf-8" ?>'+
             '<Context ID="Shop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'+
-            '<TypeName>Issue</TypeName>'+
+            '<TypeName>'+ gridParameters.odn +'</TypeName>'+
             '<OperationName>SearchObject</OperationName>'+
             ' <Filters>'+
             '    <Filter>'+
@@ -411,8 +410,8 @@ speedupGridModule.factory('gridHelper', ['$rootScope', '$compile', 'filesystemSe
             '           <Column>Description</Column>'+
             '       </Sorting>'+
             '       <Pager>'+
-            '           <Page>1</Page>'+
-            '           <Count>100</Count>'+
+            '           <Page>'+ (options.page - 1) +'</Page>'+
+            '           <Count>' + options.pageSize + '</Count>'+
             '       </Pager>'+
             '   </ResultSet>'+
             '</Context>';

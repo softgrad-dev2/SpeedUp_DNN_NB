@@ -133,6 +133,8 @@ speedupGridModule.factory('gridDataService', ['$http', '$q', 'configService',
         /// <param name="objsettings">has ObjectDefinationName, token</param>
         /// <param name="filterExpression">has filterExpression applied by user</param>
         GridDataService.getTotalRecords = function (gridParameters) {
+            // TODO: remove
+            return 10;
             var filterExpression = gridParameters.filterExpression;
             var totalRecords = 0;
             PostData.Clear();
